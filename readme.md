@@ -22,7 +22,6 @@ End-to-end (E2E) testing framework for APIs and web interfaces using [Playwright
 ├── conftest.py     # Pytest fixtures and hooks
 ├── requirements.txt
 ├── pytest.ini
-├── docker-compose.yml
 └── README.md
 ```
 
