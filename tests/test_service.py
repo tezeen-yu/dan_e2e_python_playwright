@@ -6,7 +6,7 @@ def test_add_service(service_api, page):
     gs.assert_title("Gateway Services")
     gs_form = gs.add_gateway_services()
     gs_form.assert_title("Create Gateway Service")
-    gs_item_details = gs_form.submit_new_form('cc', 'http://testservice_01.com')
+    gs_item_details = gs_form.submit_new_form('aa', 'http://testservice_01.com')
     service_id = gs_item_details.get_service_id()
     service_name = gs_item_details.get_service_name()
     gs.visit("http://localhost:8002/default/services")
@@ -21,7 +21,7 @@ def test_add_service_route(service_api, page):
     gs.assert_title("Gateway Services")
     gs_form = gs.add_gateway_services()
     gs_form.assert_title("Create Gateway Service")
-    gs_item_details = gs_form.submit_new_form('cc', 'http://testservice_01.com')
+    gs_item_details = gs_form.submit_new_form('cc', 'http://testservice_02.com')
     rt_form_page = gs_item_details.add_related_route()
     rt_form_page.create_new_route_service('route_01', '/route_01')
 
